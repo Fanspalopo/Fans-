@@ -158,6 +158,23 @@
     </footer>
 
     <script>
+                function showSection(id) {
+            // Menghapus kelas 'active' dari semua section
+            document.querySelectorAll('section').forEach(section => {
+                section.classList.remove('active');
+            });
+
+            // Menambahkan kelas 'active' ke section yang dipilih
+            document.getElementById(id).classList.add('active');
+
+            // Menambahkan kelas 'active' pada tautan navigasi yang sesuai
+            document.querySelectorAll('nav ul li a').forEach(a => {
+                a.classList.remove('active');
+                if (a.getAttribute('href') === '#' + id) {
+                    a.classList.add('active');
+                }
+            });
+                    
         const form = document.forms['google-sheet'];
 form.addEventListener('submit', e => {
     e.preventDefault();
