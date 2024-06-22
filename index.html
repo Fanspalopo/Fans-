@@ -5,99 +5,142 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing Page</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Gaya untuk menyembunyikan semua section kecuali yang aktif */
+        section {
+            display: none;
+        }
+        section.active {
+            display: block;
+        }
+        
+        /* Gaya untuk tautan navigasi */
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            color: #ffffff;
+        }
+        nav ul li a.active {
+            background-color: #000000;
+            color: #ffffff;
+        }
+        /* Gaya untuk logo */
+        .logo {
+            max-width: 1000px; /* Atur sesuai ukuran logo Anda */
+            height: auto;
+            margin-right: 10px; /* Atur margin logo dari tepi kanan */
+            float: left; /* Mengatur agar logo berada di sebelah kiri */
+        }
+        /* Gaya untuk header */
+        header {
+            overflow: auto; /* Memastikan agar header bisa menampung float */
+        }
+    </style>
 </head>
 <body>
-    <BR><BR> <header>
-        
+    <header>
+        <img src="path/to/your/logo.png" alt="Logo" class="logo"> <!-- Ganti path/to/your/logo.png dengan path logo Anda -->
         <nav>
             <ul>
-                
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#complaint">Pengaduan</a></li>
-                <li><a href="#social-media">Sosial Media</a></li>
-               
+                <li><a href="#home" onclick="showSection('home')">Home</a></li>
+                <li><a href="#about" onclick="showSection('about')">About</a></li>
+                <li><a href="#complaint" onclick="showSection('complaint')">Pengaduan</a></li>
+                <li><a href="#social-media" onclick="showSection('social-media')">Sosial Media</a></li>
             </ul>
         </nav>
-    </header><br><BR>
+    </header>
 
-
-    <section id="home">
+    <section id="home" class="active">
         <h1>HAI KENALAN YUK!</h1>
         <p>Hai kami merupakan FANS Palopo Atau Forum Anak Kota Palopo</p>
-    </section><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
-
-        <BR><BR> <header>
-        
-            <nav>
-                <ul>
-                    
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#complaint">Pengaduan</a></li>
-                    <li><a href="#social-media">Sosial Media</a></li>
-                   
-                </ul>
-            </nav>
-        </header><br>
-
+    </section>
 
     <section id="about">
         <h1>APASIH OSCEA ITU?</h1>
-        <p>Ini adalah bagian pengenalan materi.</p>
+        <p>Untuk Mengetahui Lebih Lanjut Yuk Di Lihat Beberapa Info Di Bawah</p>
     </section>
-
-
-    <BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR> <BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><header>
-        
-        <nav>
-            <ul>
-                
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#complaint">Pengaduan</a></li>
-                <li><a href="#social-media">Sosial Media</a></li>
-               
-            </ul>
-        </nav>
-    </header><br>
-
-
 
     <section id="complaint">
         <form method="post" autocomplete="off" name="google-sheet">
-            
             <h1>AYOO CERITA!!!</h1><br>
+            
+            <b> Korban / Pelapor : </b>
+            <td>
+                <select name="Jenis Kelamin" required="">
+                    <option value="" disabled selected>Pilih Gender</option>
+                    <option value="Opsi 1">Korban</option>
+                    <option value="Opsi 2">Pelapor</option>
+                    <option value="Opsi 2">Pelapor Dan Korban</option>
+                </select>
+            </td>
+            </tr><br>
 
-                   <b>Nama : </b>
-                   <td><input type="text" name="Nama"   required="" /></td>
-                  </tr><br>
-
-
-                <b>Pengaduan : </b>
-                  <td><input type="text" name="Pengaduan"   required="" /></td>
-                  </tr><br>
-                  
-                 
-               <input type="submit" name="submit" value="Submit"/>
-
+            <b>Nama : </b>
+            <td><input type="text" name="Nama" required="" /></td>
+            </tr><br>
+            <b> Usia : </b>
+            <td>
+                <select name="Usia" required="">
+                    <option value="" disabled selected>Pilih Usia</option>
+                    <option value="Opsi 1">0 - 5 Tahun</option>
+                    <option value="Opsi 2">6 - 10 Tahun</option>
+                    <option value="Opsi 2">11 - 15 Tahun</option>
+                    <option value="Opsi 2">16 - 18 Tahun</option>
+                </select>
+            </td>
+            </tr><br>
+            <b> Gender : </b>
+            <td>
+                <select name="Jenis Kelamin" required="">
+                    <option value="" disabled selected>Pilih Gender</option>
+                    <option value="Opsi 1">Laki-laki</option>
+                    <option value="Opsi 2">Perempuan</option>
+                </select>
+            </td>
+            </tr><br>
+            <b> Kecamatan : </b>
+            <td>
+                <select name="Kecamatan" required="">
+                    <option value="" disabled selected>Pilih Kecamatan</option>
+                    <option value="Opsi 1">WARA</option>
+                    <option value="Opsi 2">WARA TIMUR</option>
+                    <option value="Opsi 3">WARA BARAT</option>
+                    <option value="Opsi 4">WARA SELATAN</option>
+                    <option value="Opsi 4">WARA UTARA</option>
+                    <option value="Opsi 4">SENDANA</option>
+                    <option value="Opsi 4">TELLUWANUA</option>
+                    <option value="Opsi 4">MUNGKAJANG</option>
+                    <option value="Opsi 4">BARA</option>
+                </select>
+            </td>
+            </tr><br>
+            <b>Ceritamu : </b>
+            <td><input type="text" name="Pengaduan" required="" /></td>
+            </tr><br>
+            <input type="submit" name="submit" value="Submit"/>
         </form>
-      
         <script type="text/javascript">
-      
-      
             const scriptURL = 'https://script.google.com/macros/s/AKfycbzPD3cynT3LenJtPeJJrhqOUbWSdRG3RIyR1B5uQ6Ka6U_xzgKDXHJY-_hCr6tLglnY/exec'
-                  const form = document.forms['google-sheet']
-                
-                  form.addEventListener('submit', e => {
-                    e.preventDefault()
-                    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            const form = document.forms['google-sheet']
+            form.addEventListener('submit', e => {
+                e.preventDefault()
+                fetch(scriptURL, { method: 'POST', body: new FormData(form)})
                 .then(response => alert("Kamu Keren Udah Berani Cerita."))
                 .catch(error => console.error('Error!', error.message))
             })
-  </script>
-    </section><BR><BR>
-    
+        </script>
+    </section>
 
     <section id="social-media">
         <h1>Sosial Media</h1>
@@ -110,5 +153,25 @@
     <footer>
         <p>&copy; 2024 FANS 24 Page. All rights reserved.</p>
     </footer>
+
+    <script>
+        function showSection(id) {
+            // Menghapus kelas 'active' dari semua section
+            document.querySelectorAll('section').forEach(section => {
+                section.classList.remove('active');
+            });
+
+            // Menambahkan kelas 'active' ke section yang dipilih
+            document.getElementById(id).classList.add('active');
+
+            // Menambahkan kelas 'active' pada tautan navigasi yang sesuai
+            document.querySelectorAll('nav ul li a').forEach(a => {
+                a.classList.remove('active');
+                if (a.getAttribute('href') === '#' + id) {
+                    a.classList.add('active');
+                }
+            });
+        }
+    </script>
 </body>
 </html>
