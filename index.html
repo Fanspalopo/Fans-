@@ -47,12 +47,12 @@
 </head>
 <body>
     <header>
-       <img src="https://fanspalopo.github.io/Fans-/FALEA.png" alt="Logo" class="logo">
+        <img src="C:\Users\Administrator\Desktop\FANS PEDULI\FALEA.png" alt="Logo" class="logo"> <!-- Ganti path/to/your/logo.png dengan path logo Anda -->
         <nav>
             <ul>
                 <li><a href="#home" onclick="showSection('home')">Home</a></li>
                 <li><a href="#about" onclick="showSection('about')">About</a></li>
-                <li><a href="#complaint" onclick="showSection('complaint')">Aduan</a></li>
+                <li><a href="#complaint" onclick="showSection('complaint')">Pengaduan</a></li>
                 <li><a href="#social-media" onclick="showSection('social-media')">Sosmed</a></li>
             </ul>
         </nav>
@@ -158,7 +158,7 @@
     </footer>
 
     <script>
-                function showSection(id) {
+        function showSection(id) {
             // Menghapus kelas 'active' dari semua section
             document.querySelectorAll('section').forEach(section => {
                 section.classList.remove('active');
@@ -174,23 +174,6 @@
                     a.classList.add('active');
                 }
             });
-                    
-        const form = document.forms['google-sheet'];
-form.addEventListener('submit', e => {
-    e.preventDefault();
-    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-    .then(response => {
-        console.log('Success!', response);
-        alert("Kamu Keren Udah Berani Cerita.");
-        form.reset();
-        // Atur ulang halaman untuk menghindari pengiriman ganda
-        window.location.reload(); // Halaman akan ter-refresh
-    })
-    .catch(error => {
-        console.error('Error!', error.message);
-        alert("Maaf, terjadi kesalahan saat mengirim data.");
-    });
-
 
             // Scroll ke atas halaman ke bagian atas section yang dipilih
             const yOffset = -80; // Sesuaikan dengan tinggi header Anda jika perlu
