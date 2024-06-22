@@ -158,22 +158,22 @@
     </footer>
 
     <script>
-        function showSection(id) {
-            // Menghapus kelas 'active' dari semua section
-            document.querySelectorAll('section').forEach(section => {
-                section.classList.remove('active');
-            });
+        const form = document.forms['google-sheet'];
+form.addEventListener('submit', e => {
+    e.preventDefault();
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+    .then(response => {
+        console.log('Success!', response);
+        alert("Kamu Keren Udah Berani Cerita.");
+        form.reset();
+        // Atur ulang halaman untuk menghindari pengiriman ganda
+        window.location.reload(); // Halaman akan ter-refresh
+    })
+    .catch(error => {
+        console.error('Error!', error.message);
+        alert("Maaf, terjadi kesalahan saat mengirim data.");
+    });
 
-            // Menambahkan kelas 'active' ke section yang dipilih
-            document.getElementById(id).classList.add('active');
-
-            // Menambahkan kelas 'active' pada tautan navigasi yang sesuai
-            document.querySelectorAll('nav ul li a').forEach(a => {
-                a.classList.remove('active');
-                if (a.getAttribute('href') === '#' + id) {
-                    a.classList.add('active');
-                }
-            });
 
             // Scroll ke atas halaman ke bagian atas section yang dipilih
             const yOffset = -80; // Sesuaikan dengan tinggi header Anda jika perlu
