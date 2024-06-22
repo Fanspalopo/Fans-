@@ -10,16 +10,18 @@ body {
     line-height: 1.6;
     color: #333;
     font-size: 16px;
+    margin-top: 100px; /* Sesuaikan dengan tinggi header Anda */
 }
 
 /* Style for the header and navigation */
 header {
-    max-width: ;
-    background-color: #335b91;
-    color: white;
-    padding: 1rem 0;
-    text-align: left;
-    border-radius: 17px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #6e6fc4; /* Ubah sesuai kebutuhan */
+    z-index: 1000; /* Menentukan tingkat z-index agar tetap di atas konten */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Opsional: tambahkan shadow untuk efek visual */
 }
 
 nav ul {
@@ -75,7 +77,6 @@ p {
 }
 
 /* Style for the complaint form */
-/* CSS untuk formulir aduan */
 #complaint {
     margin: 0 auto;
     padding: 20px;
@@ -89,21 +90,22 @@ p {
     text-align: center;
     color: #333;
     margin-bottom: 20px;
-    font-family: 'Arial, serif; /* Mengubah jenis font untuk judul */
+    font-family: Arial, sans-serif; /* Mengubah jenis font untuk judul */
 }
 
 #complaint form {
     text-align: left;
 }
 
-#complaint h1 {
+#complaint form label {
     display: block;
     margin-bottom: 10px;
     color: #333;
     font-family: Arial, sans-serif; /* Mengubah jenis font untuk label */
 }
 
-#complaint form input[type="text"] {
+#complaint form input[type="text"],
+#complaint form select {
     width: 100%;
     padding: 8px;
     margin-bottom: 15px;
@@ -128,11 +130,12 @@ p {
 }
 
 @media screen and (max-width: 600px) {
+    /* Responsiveness for complaint form */
     #complaint {
         width: 100%;
+        padding: 10px; /* Adjust padding for smaller screens */
     }
 }
-
 
 /* Style for the footer */
 footer {
