@@ -9,6 +9,7 @@
         /* Gaya untuk menyembunyikan semua section kecuali yang aktif */
         section {
             display: none;
+            padding-top: 80px; /* Menambahkan padding atas untuk memberikan ruang bagi header */
         }
         section.active {
             display: block;
@@ -35,6 +36,7 @@
             background-color: #000000;
             color: #ffffff;
         }
+        
         /* Gaya untuk logo */
         .logo {
             max-width: 100px; /* Atur sesuai ukuran logo Anda */
@@ -44,7 +46,7 @@
     </style>
 </head>
 <body>
-    <br><header>
+    <header>
         <img src="C:\Users\Administrator\Desktop\FANS PEDULI\FALEA.png" alt="Logo" class="logo"> <!-- Ganti path/to/your/logo.png dengan path logo Anda -->
         <nav>
             <ul>
@@ -57,17 +59,17 @@
     </header>
 
     <section id="home" class="active">
-        <h1>HAI KENALAN YUK!</h1>
+       <h1>HAI KENALAN YUK!</h1>
         <p>Halo Anak Palopo🙌🏻<br>
-            Kami dari Forum Anak Sawerigading hadir bersama dengan salah satu program kerja kami Yaitu FALEA (FANS Peduli OSCEA). FALEA merupkan program kerja yang dibuat dengan berkolaborasi dengan salah satu Duta Anak Kota Palopo tahun 2024 yaitu Brigita Mishela Mangkuali.<br><br>
+            Kami dari Forum Anak Sawerigading hadir bersama dengan salah satu program kerja kami Yaitu FALEA (FANS Peduli OSCEA). FALEA merupakan program kerja yang dibuat dengan berkolaborasi dengan salah satu Duta Anak Kota Palopo tahun 2024 yaitu Brigita Mishela Mangkuali.<br><br>
             
-            FALEA merupakan program kerja  yang kami harap dapat menjadi wadah suara anak anak Kota Palopo yang merupkan korban dari OSCEA yang nantinya FANS akan menjadi jembatan antara korban dengan Pemerintah Kota Palopo dalam menangani kasus tersebut. <br><br>
+            FALEA merupakan program kerja yang kami harap dapat menjadi wadah suara anak-anak Kota Palopo yang merupakan korban dari OSCEA yang nantinya FANS akan menjadi jembatan antara korban dengan Pemerintah Kota Palopo dalam menangani kasus tersebut. <br><br>
             
             Kalian dapat melaporkan kasus OSCEA melalui Form Pelapor yang telah kami siapkan di website ini, silahkan isi form tersebut dengan sebaik-baiknya yah anak palopo!!!🙌🏻<br><br>
             
-            Dan jangan khawatir akan data pribadi kalian, karna data korban/pelapor akan kami lindungi sebagai mana yang tercantum pada UUD Nomor 27 Tahun 2022 yang membahas tentang perlindungan data pribadi. <br><br>
+            Dan jangan khawatir akan data pribadi kalian, karena data korban/pelapor akan kami lindungi sesuai dengan yang tercantum pada UU Nomor 27 Tahun 2022 yang membahas tentang perlindungan data pribadi. <br><br>
             
-            Untuk Informasi selanjutnya mengenai FALEA bisa kalian dapatkan melalui penjelasan di halaman berikutnya yaa!!!🤩<br><br>
+            Untuk informasi selanjutnya mengenai FALEA bisa kalian dapatkan melalui penjelasan di halaman berikutnya yaa!!!🤩<br><br>
             
             Tunggu apalagi Anak Palopo? <br><br>
             Laporkan kasus kalian dan cegah OSCEA bersama dengan Forum Anak Sawerigading Kota Palopo‼️<br><br>
@@ -76,74 +78,59 @@
 
     <section id="about">
         <h1>APASIH OSCEA ITU?</h1>
-        <p>Untuk Mengetahui Lebih Lanjut Yuk Di Lihat Beberapa Info Di Bawah</p>
+        <p>OSCEA adalah singkatan dari "Online Sexual and Child Exploitation and Abuse" atau Eksploitasi dan Penyalahgunaan Seksual dan Anak secara Online. Ini adalah sebuah masalah serius yang perlu mendapatkan perhatian dan penanganan secara serius.</p>
     </section>
 
     <section id="complaint">
         <form method="post" autocomplete="off" name="google-sheet">
             <h1>AYOO CERITA!!!</h1><br>
             
-            <b> Korban / Pelapor : </b>
-            <td>
-                <select name="Jenis Kelamin" required="">
-                    <option value="" disabled selected>Pilih Gender</option>
-                    <option value="Korban">Korban</option>
-                    <option value="Pelapor">Pelapor</option>
-                    <option value="Pelapor Dan Korban">Pelapor Dan Korban</option>
-                </select>
-            </td>
-            </tr><br>
+            <b>Korban / Pelapor :</b>
+            <select name="Jenis Kelamin" required="">
+                <option value="" disabled selected>Pilih</option>
+                <option value="Korban">Korban</option>
+                <option value="Pelapor">Pelapor</option>
+                <option value="Pelapor Dan Korban">Pelapor Dan Korban</option>
+            </select><br>
 
-            <b>Nama : </b>
-            <td><input type="text" name="Nama" required="" /></td>
-            </tr><br>
-            <b> Usia : </b>
-            <td>
-                <select name="Usia" required="">
-                    <option value="" disabled selected>Pilih Usia</option>
-                    <option value="0 - 5 Tahun">0 - 5 Tahun</option>
-                    <option value="6 - 10 Tahun">6 - 10 Tahun</option>
-                    <option value="11 - 15 Tahun">11 - 15 Tahun</option>
-                    <option value="16 - 18 Tahun">16 - 18 Tahun</option>
-                </select>
-            </td>
-            </tr><br>
-            <b> Gender : </b>
-            <td>
-                <select name="Jenis Kelamin" required="">
-                    <option value="" disabled selected>Pilih Gender</option>
-                    <option value="Laki-laki">Laki-laki</option>
-                    <option value="Perempuan">Perempuan</option>
-                </select>
-            </td>
-            </tr><br>
-            <b> Kecamatan : </b>
-            <td>
-                <select name="Kecamatan" required="">
-                    <option value="" disabled selected>Pilih Kecamatan</option>
-                    <option value="WARA">WARA</option>
-                    <option value="WARA TIMUR">WARA TIMUR</option>
-                    <option value="WARA BARAT">WARA BARAT</option>
-                    <option value="WARA SELATAN">WARA SELATAN</option>
-                    <option value="WARA UTARA">WARA UTARA</option>
-                    <option value="SENDANA">SENDANA</option>
-                    <option value="TELLUWANUA">TELLUWANUA</option>
-                    <option value="MUNGKAJANG">MUNGKAJANG</option>
-                    <option value="BARA">BARA</option>
-                </select>
-            </td>
-            </tr><br>
-            <b>Ceritamu : </b>
-            <td><input type="text" name="Pengaduan" required="" /></td>
-            </tr><br>
+            <b>Nama :</b>
+            <input type="text" name="Nama" required="" /><br>
+            <b>Usia :</b>
+            <select name="Usia" required="">
+                <option value="" disabled selected>Pilih Usia</option>
+                <option value="0 - 5 Tahun">0 - 5 Tahun</option>
+                <option value="6 - 10 Tahun">6 - 10 Tahun</option>
+                <option value="11 - 15 Tahun">11 - 15 Tahun</option>
+                <option value="16 - 18 Tahun">16 - 18 Tahun</option>
+            </select><br>
+            <b>Gender :</b>
+            <select name="Jenis Kelamin" required="">
+                <option value="" disabled selected>Pilih Gender</option>
+                <option value="Laki-laki">Laki-laki</option>
+                <option value="Perempuan">Perempuan</option>
+            </select><br>
+            <b>Kecamatan :</b>
+            <select name="Kecamatan" required="">
+                <option value="" disabled selected>Pilih Kecamatan</option>
+                <option value="WARA">WARA</option>
+                <option value="WARA TIMUR">WARA TIMUR</option>
+                <option value="WARA BARAT">WARA BARAT</option>
+                <option value="WARA SELATAN">WARA SELATAN</option>
+                <option value="WARA UTARA">WARA UTARA</option>
+                <option value="SENDANA">SENDANA</option>
+                <option value="TELLUWANUA">TELLUWANUA</option>
+                <option value="MUNGKAJANG">MUNGKAJANG</option>
+                <option value="BARA">BARA</option>
+            </select><br>
+            <b>Ceritamu :</b>
+            <input type="text" name="Pengaduan" required="" /><br>
             <input type="submit" name="submit" value="Submit"/>
         </form>
-        <script type="text/javascript">
-            const scriptURL = 'https://script.google.com/macros/s/AKfycbzPD3cynT3LenJtPeJJrhqOU
-            const scriptURL = 'https://script.google.com/macros/s/AKfycbzPD3cynT3LenJtPeJJrhqOUbWSdRG3RIyR1B5uQ6Ka6U_xzgKDXHJY-_hCr6tLglnY/exec'
-            const form = document.forms['google-sheet']
+        <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbzPD3cynT3LenJtPeJJrhqOUbWSdRG3RIyR1B5uQ6Ka6U_xzgKDXHJY-_hCr6tLglnY/exec';
+            const form = document.forms['google-sheet'];
             form.addEventListener('submit', e => {
-                e.preventDefault()
+                e.preventDefault();
                 fetch(scriptURL, { method: 'POST', body: new FormData(form)})
                 .then(response => {
                     console.log('Success!', response);
@@ -171,29 +158,34 @@
     </footer>
 
     <script>
-       function showSection(id) {
-    // Menghapus kelas 'active' dari semua section
-    document.querySelectorAll('section').forEach(section => {
-        section.classList.remove('active');
-    });
+        function showSection(id) {
+            // Menghapus kelas 'active' dari semua section
+            document.querySelectorAll('section').forEach(section => {
+                section.classList.remove('active');
+            });
 
-    // Menambahkan kelas 'active' ke section yang dipilih
-    document.getElementById(id).classList.add('active');
+            // Menambahkan kelas 'active' ke section yang dipilih
+            document.getElementById(id).classList.add('active');
 
-    // Menambahkan kelas 'active' pada tautan navigasi yang sesuai
-    document.querySelectorAll('nav ul li a').forEach(a => {
-        a.classList.remove('active');
-        if (a.getAttribute('href') === '#' + id) {
-            a.classList.add('active');
+            // Menambahkan kelas 'active' pada tautan navigasi yang sesuai
+            document.querySelectorAll('nav ul li a').forEach(a => {
+                a.classList.remove('active');
+                if (a.getAttribute('href') === '#' + id) {
+                    a.classList.add('active');
+                }
+            });
+
+            // Scroll ke atas halaman ke bagian atas section yang dipilih
+            const yOffset = -80; // Sesuaikan dengan tinggi header Anda jika perlu
+            const element = document.getElementById(id);
+            const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+            window.scrollTo({
+                top: y,
+                behavior: 'smooth'
+            });
         }
-    });
-
-    // Scroll ke atas halaman
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'  // Untuk membuat scroll menjadi smooth (halus)
-    });
-}
     </script>
 </body>
 </html>
+
